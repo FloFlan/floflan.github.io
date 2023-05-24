@@ -2,20 +2,32 @@
 <html>
 <head>
     <title>الله وسوريا وبشار!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <div style="text-align: center;">
-        <img src="https://cdn-live.foreignaffairs.com/sites/default/files/styles/_webp_large_2x/public/public-assets/images/articles/2016/01/19/simonlandis_assadhasithisway_patch.jpg.webp?itok=GTuXtwA1" alt="Image" style="max-width: 100%;">
-    </div>
-    <audio controls autoplay loop>
-        <source src="https://dl.sndup.net/m6cm/God,%20Syria%20and%20Bashar!.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <img id="myImage" src="https://fr.hespress.com/wp-content/uploads/2019/10/export.1.1508647.jpg--e1571320769903-900x600.jpg" onclick="changeImage()">
+
+    <audio id="myAudio" src="https://dl.sndup.net/m6cm/God,%20Syria%20and%20Bashar!.mp3" preload="auto"></audio>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var audio = document.querySelector('audio');
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            var audio = document.getElementById('myAudio');
+            image.src = 'https://cdn-live.foreignaffairs.com/sites/default/files/styles/_webp_large_2x/public/public-assets/images/articles/2016/01/19/simonlandis_assadhasithisway_patch.jpg.webp?itok=GTuXtwA1';
             audio.play();
-        });
+        }
     </script>
 </body>
 </html>
